@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 300px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>raghav login page</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="button" value="Login" onclick="login()">
+    </form>
+    <p id="error-message"></p>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // TO DO: implement authentication logic here
+      // For demonstration purposes, we'll just check if the username and password are not empty
+      if (username && password) {
+        alert("Login successful!");
+        // Redirect to a protected page or perform some other action
+      } else {
+        document.getElementById("error-message").innerHTML = "Invalid username or password";
+      }
+    }
+  </script>
+</body>
+</html>
